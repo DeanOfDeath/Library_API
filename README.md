@@ -30,11 +30,14 @@ Registers a new user.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": null, "data": null }
+      { "status": "success",
+       "access_token": null,
+      "data": null }
       ```
     - **Fail**:
       ```json
-      { "status": "fail", "data": { "title": "Username already taken" } }
+      { "status": "fail",
+      "data": { "title": "Username already taken" } }
       ```
 
 ### 2. User Authentication
@@ -52,11 +55,14 @@ Authenticates an existing user and returns a JWT.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+      "data": null }
       ```
     - **Fail**:
       ```json
-      { "status": "fail", "data": { "title": "Authentication Failed" } }
+      { "status": "fail",
+      "data": { "title": "Authentication Failed" } }
       ```
 
 ---
@@ -78,11 +84,14 @@ Adds a new author.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+       "data": null }
       ```
     - **Fail**:
       ```json
-      { "status": "fail", "data": { "title": "Invalid Token" } }
+      { "status": "fail",
+      "data": { "title": "Invalid Token" } }
       ```
 
 ### 4. Get All Authors
@@ -97,7 +106,9 @@ Retrieves a list of all authors.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": [ /* authors list */ ] }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+      "data": [ /* authors list */ ] }
       ```
 
 ### 5. Update Author
@@ -115,7 +126,9 @@ Updates an author’s details.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+       "access_token": "new_jwt_token",
+      "data": null }
       ```
 
 ### 6. Delete Author
@@ -130,7 +143,9 @@ Deletes an author.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+       "data": null }
       ```
 
 ---
@@ -153,7 +168,9 @@ Adds a new book.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+       "data": null }
       ```
 
 ### 8. Get All Books
@@ -168,7 +185,9 @@ Retrieves a list of all books.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": [ /* books list */ ] }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+      "data": [ /* books list */ ] }
       ```
 
 ### 9. Update Book
@@ -187,7 +206,9 @@ Updates a book’s details.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+      "data": null }
       ```
 
 ### 10. Delete Book
@@ -202,7 +223,9 @@ Deletes a book.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+       "data": null }
       ```
 
 ---
@@ -227,11 +250,15 @@ Borrows a book for a user.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "message": "Book borrowed successfully" }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+      "message": "Book borrowed successfully" }
       ```
     - **Fail**:
       ```json
-      { "status": "fail", "access_token": "new_jwt_token", "message": "Book is currently unavailable" }
+      { "status": "fail",
+       "access_token": "new_jwt_token",
+      "message": "Book is currently unavailable" }
       ```
 
 ### 12. Return a Book
@@ -251,11 +278,15 @@ Returns a borrowed book.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "message": "Book returned successfully" }
+      { "status": "success",
+       "access_token": "new_jwt_token",
+      "message": "Book returned successfully" }
       ```
     - **Fail**:
       ```json
-      { "status": "fail", "access_token": "new_jwt_token", "message": "No active borrowing record found for this book and borrower" }
+      { "status": "fail",
+       "access_token": "new_jwt_token",
+       "message": "No active borrowing record found for this book and borrower" }
       ```
 
 ### 13. List All Currently Borrowed Books
@@ -270,7 +301,9 @@ Retrieves a list of all currently borrowed books.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": [ /* borrowed books list */ ] }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+      "data": [ /* borrowed books list */ ] }
       ```
 
 ---
@@ -293,7 +326,9 @@ Associates a book with an author.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+      "data": null }
       ```
 
 ### 15. Get All Book-Author Relations
@@ -308,7 +343,9 @@ Retrieves all book-author relations.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": [ /* relations list */ ] }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+      "data": [ /* relations list */ ] }
       ```
 
 ### 16. Delete Book-Author Relation
@@ -323,7 +360,9 @@ Deletes a book-author relation by ID.
 - **Response**:
     - **Success**:
       ```json
-      { "status": "success", "access_token": "new_jwt_token", "data": null }
+      { "status": "success",
+      "access_token": "new_jwt_token",
+       "data": null }
       ```
 
 ---
