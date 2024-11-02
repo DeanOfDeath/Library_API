@@ -227,12 +227,51 @@ Deletes a book.
       "access_token": "new_jwt_token",
        "data": null }
       ```
+### 11. Get Books by Author ID
+Retrieves all books associated with a specific author by their ID.
+
+- **Endpoint**: `/books/get_by_author`
+- **Method**: `POST`
+- **Request Body**:
+    ```json
+    {
+      "author_id": 1,
+      "token": "valid_jwt_token"
+    }
+    ```
+- **Response**:
+    - **Success**:
+      ```json
+      {
+        "status": "success",
+        "access_token": "new_jwt_token",
+        "data": [ /* list of books */ ]
+      }
+      ```
+    - **Fail (Missing Author ID)**:
+      ```json
+      {
+        "status": "fail",
+        "access_token": null,
+        "message": "author_id is required"
+      }
+      ```
+    - **Fail (Database Error)**:
+      ```json
+      {
+        "status": "fail",
+        "access_token": null,
+        "data": {
+          "title": "Error Message from Database"
+        }
+      }
+      ```
 
 ---
 
 ## Borrowing and Returning Books
 
-### 11. Borrow a Book
+### 12. Borrow a Book
 Borrows a book for a user.
 
 - **Endpoint**: `/borrow`
@@ -261,7 +300,7 @@ Borrows a book for a user.
       "message": "Book is currently unavailable" }
       ```
 
-### 12. Return a Book
+### 13. Return a Book
 Returns a borrowed book.
 
 - **Endpoint**: `/return`
@@ -289,7 +328,7 @@ Returns a borrowed book.
        "message": "No active borrowing record found for this book and borrower" }
       ```
 
-### 13. List All Currently Borrowed Books
+### 14. List All Currently Borrowed Books
 Retrieves a list of all currently borrowed books.
 
 - **Endpoint**: `/books/borrowed`
@@ -310,7 +349,7 @@ Retrieves a list of all currently borrowed books.
 
 ## Book-Author Relations
 
-### 14. Create Book-Author Relation
+### 15. Create Book-Author Relation
 Associates a book with an author.
 
 - **Endpoint**: `/books_authors`
@@ -331,7 +370,7 @@ Associates a book with an author.
       "data": null }
       ```
 
-### 15. Get All Book-Author Relations
+### 16. Get All Book-Author Relations
 Retrieves all book-author relations.
 
 - **Endpoint**: `/books_authors/get`
@@ -348,7 +387,7 @@ Retrieves all book-author relations.
       "data": [ /* relations list */ ] }
       ```
 
-### 16. Delete Book-Author Relation
+### 17. Delete Book-Author Relation
 Deletes a book-author relation by ID.
 
 - **Endpoint**: `/books_authors/delete/{id}`
